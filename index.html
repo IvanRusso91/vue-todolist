@@ -18,14 +18,20 @@
 
     <div class="box">
 
-      <input type="text" placeholder="Inserisci">
-      <button>Aggiungi</button>
+      <input v-model.trim="nuoviAttrezzi.text" 
+      @keyup.enter="aggiunti" 
+      type="text" placeholder="Inserisci">
+
+      <button @click="aggiunti">Aggiungi</button>
 
     </div>
+    
     <div class="box-list">
 
       <ul>
-        <li><p>P</p> <i class="fa-solid fa-xmark"></i></li>
+        <li v-for="oggetti in attrezzi">
+          <p>{{oggetti.text}}</p>
+           <i class="fa-solid fa-xmark"></i></li>
       </ul>
       
     </div>

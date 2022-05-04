@@ -4,7 +4,7 @@ const app = new Vue({
   el:'#app',
 
   data:{
-    Attrezzi:[
+    attrezzi:[
       {
         text:'martello',
         done: false,
@@ -23,6 +23,22 @@ const app = new Vue({
       },
     ],
 
-    nuoviAttrezzi : 0,
+    nuoviAttrezzi :{ text:'',
+      done:false,
+  },
+
+    
+  },
+  
+  methods:{
+    aggiunti(){  
+      if(this.nuoviAttrezzi.text.length > 1){
+        this.attrezzi.push(this.nuoviAttrezzi);
+        this.nuoviAttrezzi.text= '';
+      }
+    },
+    
+
+    
   }
 })
