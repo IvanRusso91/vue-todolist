@@ -34,11 +34,16 @@ const app = new Vue({
     aggiunti(){  
       if(this.nuoviAttrezzi.text.length > 1){
         this.attrezzi.push(this.nuoviAttrezzi);
-        this.nuoviAttrezzi.text= '';
+        this.nuoviAttrezzi= {text: ''};
       }
     },
     
+    remove(index){
+     if(confirm(`sei sicuro di volerlo eliminare?`)){
+      this.attrezzi.splice(index, 1);
+      }
 
-    
+    },
+
   }
-})
+});

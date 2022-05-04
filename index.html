@@ -28,11 +28,13 @@
     
     <div class="box-list">
 
-      <ul>
-        <li v-for="oggetti in attrezzi">
+      <ul v-if='attrezzi.length > 0'>
+        <li v-for="(oggetti, index) in attrezzi">
           <p>{{oggetti.text}}</p>
-           <i class="fa-solid fa-xmark"></i></li>
+           <i class="fa-solid fa-xmark"
+           @click = "remove(index)"></i></li>
       </ul>
+      <h2 v-else class="avviso">La tua lista è vuota.</h2>
       
     </div>
 

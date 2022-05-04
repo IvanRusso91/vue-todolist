@@ -7,6 +7,7 @@
 .container h1{
   text-align: center;
   padding: 30px ;
+  color: rgb(0, 150, 250);
 }
 
 .box{
@@ -51,6 +52,8 @@ button:hover {
 } */
 
 .box-list ul li{
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid black;
   padding: 20px 15px;
 }
@@ -72,3 +75,9 @@ i:hover{
   color: rgb(0, 0, 0);
   cursor: pointer;
 }
+
+.avviso{
+  text-align: center;
+  color: rgb(0, 150, 250);
+}
+
