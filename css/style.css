@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container h1{
+  text-align: center;
+  padding: 30px ;
+}
+
+.box{
+  text-align: center;
+}
+
+.box input,
+.box button{
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: solid 1px;
+}
+
+button{
+  background-color: rgb(0, 162, 255);
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: rgb(6, 140, 218);
+
+}
+
+.box-list{
+  background-color: rgb(223, 223, 223);
+  width: 80%;
+  margin: auto; 
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.box-list ul{
+  list-style: none;
+  padding: 15px;
+}
+
+ul:hover{
+ background-color: rgb(197, 194, 194);
+ border-radius: 20px;
+}
+
+.box-list ul li{
+  border-bottom: 1px solid black;
+  padding: 20px 15px;
+}
+
+li p{
+  display: inline-block;
+  font-weight: bold;
+}
+
+p:hover{
+  cursor: pointer;
+}
+
+i{
+  margin-left: 95%;
+  color: gray;
+}
+
+i:hover{
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
