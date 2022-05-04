@@ -6,28 +6,27 @@ const app = new Vue({
   data:{
     attrezzi:[
       {
-        text:'martello',
+        text:'Martello',
+        done: true,
+      },
+      {
+        text:'Chiodi',
         done: false,
       },
       {
-        text:'chiodi',
+        text:'Viti',
         done: false,
       },
       {
-        text:'viti',
-        done: false,
-      },
-      {
-        text:'cacciaviti',
+        text:'Cacciaviti',
         done: false,
       },
     ],
 
     nuoviAttrezzi :{ text:'',
       done:false,
-  },
-
-    
+    },
+  
   },
   
   methods:{
@@ -42,8 +41,6 @@ const app = new Vue({
      if(confirm(`sei sicuro di volerlo eliminare?`)){
       this.attrezzi.splice(index, 1);
       }
-
     },
-
   }
 });

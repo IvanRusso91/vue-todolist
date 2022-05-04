@@ -4,21 +4,27 @@
   box-sizing: border-box;
 }
 
+.container{
+  height: 100vh;
+  text-align: center;
+  background-image: url(https://wallpaperaccess.com/full/1719859.jpg);
+  background-position: center;
+  background-size: cover;
+ 
+}
+
 .container h1{
   text-align: center;
   padding: 30px ;
   color: rgb(0, 150, 250);
 }
 
-.box{
-  text-align: center;
-}
-
-.box input,
-.box button{
+.container input,
+.container button{
   padding: 10px 20px;
   border-radius: 10px;
   border: solid 1px;
+  opacity: 0.8;
 }
 
 button{
@@ -28,9 +34,13 @@ button{
   margin-left: 10px;
 }
 
-button:hover {
-  background-color: rgb(6, 140, 218);
+button:hover,
+input:hover{
+  opacity: 1;
+}
 
+input:focus{
+  opacity: 1;
 }
 
 .box-list{
@@ -39,17 +49,13 @@ button:hover {
   margin: auto; 
   margin-top: 50px;
   border-radius: 20px;
+  opacity: 0.9;
 }
 
 .box-list ul{
   list-style: none;
   padding: 15px;
 }
-
-/* ul:hover{
- background-color: rgb(197, 194, 194);
- border-radius: 20px;
-} */
 
 .box-list ul li{
   display: flex;
@@ -58,13 +64,22 @@ button:hover {
   padding: 20px 15px;
 }
 
-li p{
+ul li:hover{
+  background-color: rgb(197, 194, 194);
+  border-radius: 20px;
+ }
+
+li h3{
   display: inline-block;
   font-weight: bold;
 }
 
-p:hover{
+h3:hover{
   cursor: pointer;
+}
+
+.linear{
+  text-decoration:line-through rgb(255, 0, 0);
 }
 
 i{

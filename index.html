@@ -14,25 +14,28 @@
 <body>
 
   <div id="app" class="container">
-    <h1>ToDo list</h1>
 
-    <div class="box">
+    <h1>ToDo list!</h1>
 
-      <input v-model.trim="nuoviAttrezzi.text" 
-      @keyup.enter="aggiunti" 
-      type="text" placeholder="Inserisci">
+    <input v-model.trim="nuoviAttrezzi.text" 
+    @keyup.enter="aggiunti" 
+    type="text" placeholder="Inserisci">
 
-      <button @click="aggiunti">Aggiungi</button>
+    <button @click="aggiunti">Aggiungi</button>
 
-    </div>
     
     <div class="box-list">
 
       <ul v-if='attrezzi.length > 0'>
         <li v-for="(oggetti, index) in attrezzi">
-          <p>{{oggetti.text}}</p>
+          <h3
+          :class="{'linear' : oggetti.done}" 
+          @click="oggetti.done = !oggetti.done"
+          >{{oggetti.text}}</h3>
+
            <i class="fa-solid fa-xmark"
-           @click = "remove(index)"></i></li>
+           @click = "remove(index)"></i>
+          </li>
       </ul>
       <h2 v-else class="avviso">La tua lista è vuota.</h2>
       
@@ -40,7 +43,6 @@
 
   </div>
   
-
   <script src="js/script.js"></script>
 </body>
 </html>
